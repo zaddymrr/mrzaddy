@@ -72,25 +72,30 @@ body {
 }
 
 /* ── Dark toggle ── */
+.theme-toggle-wrap {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--toggle-bg);
   color: var(--toggle-color);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.theme-toggle:hover { border-color: var(--text3); }
-.theme-toggle svg { width: 16px; height: 16px; }
+.theme-toggle:hover { border-color: var(--text3); color: var(--text); }
+.theme-toggle svg { width: 14px; height: 14px; flex-shrink: 0; }
+.toggle-label { color: inherit; }
 
 /* show sun in dark mode, moon in light mode */
 [data-theme="light"] .icon-sun  { display: none; }
@@ -366,5 +371,4 @@ h1 {
   h1 { font-size: 22px; }
   .card { flex-direction: column; gap: 14px; }
   .card-img { width: 48px; height: 48px; }
-  .theme-toggle { top: 14px; right: 14px; }
 }
