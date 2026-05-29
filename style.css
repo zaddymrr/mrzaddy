@@ -81,12 +81,17 @@ main {
 /* ── Hero ── */
 .hero {
   display: flex;
-  align-items: flex-start;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
   margin-bottom: 56px;
 }
 
-.hero-left { flex-shrink: 0; }
+.hero-left {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
 
 .avatar {
   width: 120px;
@@ -113,9 +118,11 @@ main {
 }
 
 .hero-right {
-  flex: 1;
-  min-width: 0;
-  padding-top: 6px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
 }
 
 h1 {
@@ -132,12 +139,14 @@ h1 {
   color: var(--text2);
   line-height: 1.65;
   margin-bottom: 20px;
-  max-width: 560px;
+  max-width: 580px;
+  text-align: center;
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px 24px;
   margin-bottom: 24px;
 }
@@ -158,6 +167,7 @@ h1 {
 .socials {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -186,7 +196,7 @@ h1 {
 .theme-toggle-wrap {
   margin-top: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .theme-toggle {
@@ -375,7 +385,6 @@ h1 {
 /* ── Mobile ── */
 @media (max-width: 480px) {
   main { padding: 48px 20px 80px; }
-  .hero { flex-direction: column; gap: 20px; }
   .avatar { width: 80px; height: 80px; }
   h1 { font-size: 26px; }
   .bio { font-size: 15px; }
