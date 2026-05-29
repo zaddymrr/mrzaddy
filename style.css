@@ -327,18 +327,22 @@ h1 {
   min-width: 160px;
   padding: 11px 24px;
   border-radius: 10px;
-  background: #2563eb;
+  background: linear-gradient(135deg, #1a1a1a 0%, #555555 100%);
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s, transform 0.1s;
+  transition: opacity 0.15s, transform 0.1s;
 }
 .card:hover .card-cta {
-  background: #1d4ed8;
+  opacity: 0.88;
   transform: translateY(-1px);
+}
+[data-theme="dark"] .card-cta {
+  background: linear-gradient(135deg, #e0e0e0 0%, #888888 100%);
+  color: #111111;
 }
 
 /* ── Badges ── */
