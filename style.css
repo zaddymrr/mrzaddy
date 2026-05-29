@@ -75,7 +75,7 @@ body {
 main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 80px 48px 120px;
+  padding: 22px 48px 100px;
 }
 
 /* ── Hero ── */
@@ -192,21 +192,23 @@ h1 {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 9px 18px;
-  border-radius: 999px;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   border: 1px solid var(--border);
-  background: var(--toggle-bg);
-  color: var(--toggle-color);
+  background: var(--bg2);
+  color: var(--text2);
   cursor: pointer;
-  font-size: 13.5px;
-  font-weight: 500;
   font-family: inherit;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
 }
-.theme-toggle:hover { border-color: var(--text3); color: var(--text); }
-.theme-toggle svg { width: 15px; height: 15px; flex-shrink: 0; }
-.toggle-label { color: inherit; }
+.theme-toggle:hover {
+  border-color: var(--text3);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.theme-toggle svg { width: 18px; height: 18px; flex-shrink: 0; }
 
 [data-theme="light"] .icon-sun  { display: none; }
 [data-theme="light"] .icon-moon { display: block; }
