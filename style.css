@@ -252,19 +252,8 @@ h1 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px 28px;
-  text-decoration: none;
   color: inherit;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
-  cursor: pointer;
-}
-.card:hover {
-  box-shadow: 0 2px 10px rgba(0,0,0,.08), 0 12px 36px rgba(0,0,0,.1);
-  transform: translateY(-2px);
-  border-color: var(--text3);
-}
-[data-theme="dark"] .card:hover {
-  box-shadow: 0 2px 10px rgba(0,0,0,.45), 0 12px 36px rgba(0,0,0,.45);
 }
 
 /* card icon — far left */
@@ -327,22 +316,28 @@ h1 {
   min-width: 160px;
   padding: 11px 24px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #555555 100%);
+  background: #1a1a1a;
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
-  border: none;
+  text-decoration: none;
+  border: 2px solid #1a1a1a;
   cursor: pointer;
   white-space: nowrap;
-  transition: opacity 0.15s, transform 0.1s;
+  transition: all 0.2s ease;
 }
-.card:hover .card-cta {
-  opacity: 0.88;
-  transform: translateY(-1px);
+.card-cta:hover {
+  background: #ffffff;
+  color: #1a1a1a;
 }
 [data-theme="dark"] .card-cta {
-  background: linear-gradient(135deg, #e0e0e0 0%, #888888 100%);
+  background: #e8e8e8;
   color: #111111;
+  border-color: #e8e8e8;
+}
+[data-theme="dark"] .card-cta:hover {
+  background: #111111;
+  color: #e8e8e8;
 }
 
 /* ── Badges ── */
