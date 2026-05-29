@@ -81,21 +81,17 @@ main {
 /* ── Hero ── */
 .hero {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  gap: 0;
-  margin-bottom: 56px;
+  gap: 36px;
+  margin-bottom: 32px;
 }
 
-.hero-left {
-  flex-shrink: 0;
-  margin-bottom: 20px;
-}
+.hero-left { flex-shrink: 0; }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--bg2);
@@ -112,16 +108,17 @@ main {
   width: 100%; height: 100%;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 52px;
   font-weight: 700;
   color: var(--text3);
 }
 
 .hero-right {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 0;
 }
 
@@ -135,20 +132,20 @@ h1 {
 }
 
 .bio {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--text2);
   line-height: 1.65;
-  margin-bottom: 20px;
-  max-width: 580px;
-  text-align: center;
+  margin-bottom: 18px;
+  max-width: 480px;
+  text-align: left;
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 24px;
-  margin-bottom: 24px;
+  justify-content: flex-start;
+  gap: 6px 20px;
+  margin-bottom: 18px;
 }
 
 .hero-link {
@@ -167,7 +164,7 @@ h1 {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
 }
 
@@ -194,9 +191,9 @@ h1 {
 
 /* ── Dark toggle ── */
 .theme-toggle-wrap {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .theme-toggle {
@@ -229,11 +226,11 @@ h1 {
 .divider {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 0 0 52px;
+  margin: 0 0 32px;
 }
 
 /* ── Sections ── */
-.section { margin-bottom: 52px; }
+.section { margin-bottom: 36px; }
 
 .section-eyebrow {
   font-size: 11.5px;
@@ -375,19 +372,24 @@ h1 {
 
 /* ── Tablet ── */
 @media (max-width: 720px) {
-  main { padding: 60px 32px 100px; }
-  h1 { font-size: 30px; }
-  .avatar { width: 96px; height: 96px; }
+  main { padding: 48px 32px 80px; }
   .hero { gap: 28px; }
-  .bio { font-size: 16px; }
+  .avatar { width: 180px; height: 180px; }
+  h1 { font-size: 30px; }
+  .bio { font-size: 15px; }
 }
 
 /* ── Mobile ── */
-@media (max-width: 480px) {
-  main { padding: 48px 20px 80px; }
-  .avatar { width: 80px; height: 80px; }
+@media (max-width: 540px) {
+  main { padding: 40px 20px 80px; }
+  .hero { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+  .hero-right { align-items: center; }
+  .bio { text-align: center; max-width: 100%; }
+  .hero-links { justify-content: center; }
+  .socials { justify-content: center; }
+  .theme-toggle-wrap { justify-content: center; }
+  .avatar { width: 120px; height: 120px; }
   h1 { font-size: 26px; }
-  .bio { font-size: 15px; }
   .card { flex-direction: column; gap: 16px; }
   .card-img { width: 54px; height: 54px; }
   .card-title { font-size: 15px; }
