@@ -191,8 +191,7 @@ h1 {
 
 /* ── Dark toggle ── */
 .theme-toggle-wrap {
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin-top: 16px;
   display: flex;
   justify-content: flex-start;
 }
